@@ -6,40 +6,24 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
-import { HttpClientModule, HttpClient } from '@angular/common/http';
-import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
-import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { EventProvider } from './event-provider.service';
-
-export function HttpLoaderFactory(http: HttpClient) {
-return new TranslateHttpLoader(http);
-}
-
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { ProductsComponent } from './products/products.component';
 
 
 @NgModule({
-declarations: [AppComponent],
-entryComponents: [],
-imports: [
- BrowserModule, 
- IonicModule.forRoot(), 
- 
- HttpClientModule,
- TranslateModule.forRoot({
-  loader: {
-    provide:  TranslateLoader,
-    useFactory: HttpLoaderFactory,
-    deps: [HttpClient]
-   }
- })
-],
-providers: [
-  StatusBar,
-  SplashScreen,
-  { provide: RouteReuseStrategy, useClass: IonicRouteStrategy}
-],
-bootstrap: [AppComponent]
- })
-  export class AppModule {}
+  declarations: [AppComponent,ProductsComponent],
+  entryComponents: [ProductsComponent],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, FormsModule,HttpClientModule],
+  providers: [
+    StatusBar,
+    SplashScreen,
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+  ],
+  bootstrap: [AppComponent]
+  //bootstrap: [UserPanelPage]
+  //bootstrap: [LoginComponent]
+})
+export class AppModule {}
