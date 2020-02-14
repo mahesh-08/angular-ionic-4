@@ -11,7 +11,8 @@
         <ion-col>
           <div padding>
             <ion-item>
-              <ion-input type="text" value="mahesh" placeholder="User Name" [(ngModel)]="user_name" name="user_name" event="ionBlur">
+              <ion-label floating >User Name</ion-label>
+              <ion-input type="text" value="mahesh"[(ngModel)]="user_name" name="user_name" event="ionBlur">
               </ion-input>
             </ion-item>
           </div>
@@ -34,6 +35,40 @@
         </ion-col>
       </ion-row>
     </ion-grid>
+
+  
+<!-- 
+    <ion-list>
+      <ion-item>
+          <ion-label position="floating">Test 1</ion-label>
+          <ion-textarea clearInput></ion-textarea>
+      </ion-item>
+      <ion-item>
+          <ion-label position="floating">Test 2</ion-label>
+          <ion-textarea clearInput value="YES"></ion-textarea>
+      </ion-item>
+      <ion-item>
+          <ion-label position="floating">Test 3</ion-label>
+          <ion-textarea clearInput [value]="angular"></ion-textarea>
+      </ion-item>
+      <ion-item>
+          <ion-label position="floating">Test 4</ion-label>
+          <ion-textarea clearInput [value]="angularAsync"></ion-textarea>
+      </ion-item>
+      <ion-item>
+          <ion-label position="floating">Test 5</ion-label>
+          <ion-textarea clearInput [(ngModel)]="angularNgModel"></ion-textarea>
+      </ion-item>
+      <ion-item>
+          <ion-label position="floating">Test 6</ion-label>
+          <ion-textarea clearInput [(ngModel)]="angularAsyncNgModel"></ion-textarea>
+      </ion-item>
+  </ion-list> -->
+
+
+
+
+
 
   </ion-content>
 
