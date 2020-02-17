@@ -1,99 +1,46 @@
 <ion-app>
-  <ion-header>
-    <ion-toolbar justify-content-center>
-      <ion-title >Login</ion-title>
-    </ion-toolbar>
-  </ion-header>
+	<ion-header>
+		<ion-toolbar justify-content-center>
+			<ion-title>Login</ion-title>
+		</ion-toolbar>
+	</ion-header>
 
-  <ion-content>
-    <ion-grid>
-      <ion-row justify-content-center>
-        <ion-col>
-          <div padding>
-            <ion-item>
-              <ion-label position="floating" >User Name</ion-label>
-              <ion-input type="text" value="mahesh"[(ngModel)]="user_name" name="user_name" event="ionBlur">
-              </ion-input>
-            </ion-item>
-          </div>
-          <div padding>
+	<ion-content>
+		<ion-grid>
+			<ion-row justify-content-center>
+				<ion-col>
+					<div padding>
+						<ion-item>
+							<ion-label position="floating"><ion-icon name="person"></ion-icon> User Name</ion-label>
+							<ion-input type="text" value="mahesh" [(ngModel)]="user_name" name="user_name"
+								event="ionBlur">
+							</ion-input>
+						</ion-item>
+					</div>
+					<div padding>
+						<ion-item>
+							<ion-label position="floating"> <ion-icon name="lock"></ion-icon>
+Password</ion-label>
+							<ion-input type="password" value="mahesh08" [(ngModel)]="password"
+								name="password"></ion-input>
+						</ion-item>
+					</div>
 
-            <ion-item>
-              <ion-input type="password" value="mahesh08" placeholder="*******" [(ngModel)]="password" name="password"></ion-input>
-            </ion-item>
-          </div>
+					<div padding>
+						<ion-button expand="block" color="primary" (click)="login()">Login</ion-button>
+					</div>
+					<div padding>
+						<ion-button expand="block" color="primary" (click)="next()">next</ion-button>
+					</div>
+					<div padding>
+						<a href="#">Forgot password?</a>
+					</div>
+				</ion-col>
+			</ion-row>
+		</ion-grid>
 
-          <div padding>
-            <ion-button expand="block" color="primary" (click)="login()">Login</ion-button>
-          </div>
-          <div padding>
-            <ion-button expand="block" color="primary" (click)="next()">next</ion-button>
-          </div>
-          <div padding>
-            <a href="#">Forgot password?</a>
-          </div>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
+	</ion-content>
 
-  
-<!-- 
-    <ion-list>
-      <ion-item>
-          <ion-label position="floating">Test 1</ion-label>
-          <ion-textarea clearInput></ion-textarea>
-      </ion-item>
-      <ion-item>
-          <ion-label position="floating">Test 2</ion-label>
-          <ion-textarea clearInput value="YES"></ion-textarea>
-      </ion-item>
-      <ion-item>
-          <ion-label position="floating">Test 3</ion-label>
-          <ion-textarea clearInput [value]="angular"></ion-textarea>
-      </ion-item>
-      <ion-item>
-          <ion-label position="floating">Test 4</ion-label>
-          <ion-textarea clearInput [value]="angularAsync"></ion-textarea>
-      </ion-item>
-      <ion-item>
-          <ion-label position="floating">Test 5</ion-label>
-          <ion-textarea clearInput [(ngModel)]="angularNgModel"></ion-textarea>
-      </ion-item>
-      <ion-item>
-          <ion-label position="floating">Test 6</ion-label>
-          <ion-textarea clearInput [(ngModel)]="angularAsyncNgModel"></ion-textarea>
-      </ion-item>
-  </ion-list> -->
-
-
-
-
-
-
-	<!-- <ion-item>
-				<ion-label floating >Username</ion-label>
-				<ion-input [(ngModel)]="login.username" name="username" type="text" #username="ngModel" spellcheck="false" autocapitalize="off"
-					required>
-				</ion-input>
-			</ion-item>
-			<p ion-text [hidden]="username.valid || submitted == false" color="danger" padding-left>
-				Username is required
-			</p>
-
-			<ion-item>
-				<ion-label floating >Password</ion-label>
-				<ion-input [(ngModel)]="login.password" name="password" type="password" #password="ngModel" required>
-				</ion-input>
-			</ion-item>
-			<p ion-text [hidden]="password.valid || submitted == false" color="danger" padding-left>
-				Password is required
-			</p> -->
-
-
-
-
-
-
-  </ion-content>
 
 </ion-app>
+
