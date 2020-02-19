@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { MyService } from '../my.service';
+//import { MyService } from '../my.service';
 import { Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
+import { DataProvider } from '../classes/DataProvider';
 
 @Component({
   selector: 'app-login',
@@ -11,7 +12,7 @@ import { AlertController } from '@ionic/angular';
 export class LoginPage implements OnInit {
   geolocationPosition: Position;
 
-  constructor(private ser:MyService,
+  constructor(private ser:DataProvider,
     private alertController: AlertController,
     private route:Router,
 ) { }
